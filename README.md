@@ -2,6 +2,9 @@
 
 This LKM is an example of how to find and manipulate the syscall table. The module searches the kernel address space to find the system call table. Once it is found, it replaces the `mkdir()` system call with another function. This new function executes the original `mkdir()` system call, then prints the arguments provided in the system call to the kernel log.
 
+### Warning
+This LKM is designed for platforms running x86_64 Intel processors and was only tested on Ubuntu 14.04. Run at your own risk.
+
 ### Usage
 
 first build and load the kernel module.
